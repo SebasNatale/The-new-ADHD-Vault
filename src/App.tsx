@@ -2,11 +2,6 @@ import MainMenu from "./components/mainMenu";
 import './App.css';
 import { useEffect, useState } from "react";
 
-const screens = {
-  mainMenu: "<MainMenu/>",
-  musicRoom: "lol"
-};
-
 function App() {
   const [currentScreen, setCurrentScreen] = useState<Object | null>(null);
 

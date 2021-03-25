@@ -23,7 +23,9 @@ function MainMenu(props: Props) {
                     className="buttons" 
                     type="button" 
                     onClick={() => {
+
                         bgWrap.style.width = "100%"
+                        
                         props.screenSelected(<MusicRoom/>)
                     }}
                     >Music shit
