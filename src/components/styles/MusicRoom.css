@@ -1,0 +1,81 @@
+#bg_root {
+    width: 100%;
+    height: 100%;
+}
+
+#warmUpInterface {
+
+
+
+
+
+    position: absolute;
+    z-index: 1000;
+
+
+
+
+
+}
+.warmUpVideoFade {
+    color: white;
+
+
+
+
+
+    position: fixed;
+
+
+
+
+
+
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: black;
+    animation: fadeOut 700ms;
+}
+.warmUpVideoFade > h1 {
+    color: white;
+    text-align: center;
+    margin: 25px;
+}
+.warmUpVideo {
+    width: 90%;
+    height: 274px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 25px;
+}
+.warmUpVideoFade > i {
+    position: relative;
+    right: 41%;
+    bottom: 7px;
+    animation: bounce 400ms alternate-reverse infinite;
+}
+
+@media (min-width: 948px) {
+    .warmUpVideoFade {
+        height: 60%;
+    }
+    .warmUpVideo {
+        height: 80%;
+    }
+    .warmUpVideoFade > i {
+        bottom: 3px;
+    }
+}
+@media (min-width: 1280px) {
+    .warmUpVideoFade {
+        height: 100%;
+    }
+    .warmUpVideo {
+        height: 87%;
+    }
+    .warmUpVideoFade > i {
+        bottom: 1px;
+    }
+}
