@@ -1,5 +1,5 @@
 import './styles/MusicRoom.css';
-import MainMenu from "./mainMenu";
+import MainMenu from "./MainMenu";
 
 function MusicRoom() {
     return (

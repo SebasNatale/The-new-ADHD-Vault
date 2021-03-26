@@ -1,14 +1,11 @@
-import MusicRoom from "./musicRoom";
-
+import MusicRoom from "./MusicRoom";
 import mblBanner from "../images/MOBILEheader_bannerWHITE.png";
 import dskBanner from "../images/header_bannerWHITE.png";
 import './styles/MainMenu.css';
 
-//  TODO: averiguar como putas hacer esto
-const bgWrap = document.getElementById("bg_wrap")!;
-
 interface Props {
     screenSelected: (screen: Object | null) => void;
+    musicRoomBgResize: () => void;
 };
 
 function MainMenu(props: Props) {
@@ -22,11 +19,9 @@ function MainMenu(props: Props) {
                 <button 
                     className="buttons" 
                     type="button" 
-                    onClick={() => {
-
-                        bgWrap.style.width = "100%"
-                        
+                    onClick={() => {                        
                         props.screenSelected(<MusicRoom/>)
+                        props.musicRoomBgResize()
                     }}
                     >Music shit
                 </button>
