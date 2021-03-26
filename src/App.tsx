@@ -1,6 +1,6 @@
 import MainMenu from "./components/MainMenu";
 import './App.css';
-import { useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState<Object | null>(null)
