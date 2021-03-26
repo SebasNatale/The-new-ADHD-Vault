@@ -17,8 +17,8 @@ function App() {
     setCurrentScreen(screen)
   }
   const handleBgResize = () => {
-      if (animatedBackground.current !== null) animatedBackground.current.style.width = "100%"
-      if (animatedBackground.current !== null) animatedBackground.current.style.height = "100%"
+      if (animatedBackground.current) animatedBackground.current.style.width = "100%"
+      if (animatedBackground.current) animatedBackground.current.style.height = "100%"
   }
 
   return (
