@@ -1,4 +1,3 @@
-import handleGoBackClick from './BackHomeButon';
 import './styles/MusicRoom.css';
 
 function MusicRoom() {
@@ -15,7 +14,7 @@ function MusicRoom() {
 
         </div>
         <div id="warmUpInterface">
-            <button className="backHomeButton" type="button" onClick={handleGoBackClick}>Test123</button>
+            <button className="backHomeButton" type="button" onClick={() => window.location.reload()}>Go back</button>
         </div>
     </>
 };
