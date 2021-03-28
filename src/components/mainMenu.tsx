@@ -4,8 +4,8 @@ import dskBanner from "../images/header_bannerWHITE.png";
 import './styles/MainMenu.css';
 
 interface Props {
-    screenSelected: (screen: Object | null) => void;
-    musicRoomBgResize: () => void;
+    screenSelected?: (screen: Object | null) => void;
+    musicRoomBgResize?: () => void;
 };
 
 function MainMenu(props: Props) {
@@ -15,17 +15,31 @@ function MainMenu(props: Props) {
             <img className="mblBanner" src={mblBanner}></img>
             <h1 className="bannerTxt">What do you wanna do?</h1>
             <div className="btnContainer">
-                <button className="buttons" type="button" onClick={() => props.screenSelected(null)}>Dev shit</button>
+                <button 
+                    className="buttons" 
+                    type="button" 
+                    onClick={() => 
+                        props.screenSelected && props.screenSelected!(null)
+                    }>
+                        Dev shit
+                    </button>
                 <button 
                     className="buttons" 
                     type="button" 
                     onClick={() => {                        
-                        props.screenSelected(<MusicRoom/>)
-                        props.musicRoomBgResize()
-                    }}
-                    >Music shit
+                        props.screenSelected && props.screenSelected(<MusicRoom/>)
+                        props.musicRoomBgResize && props.musicRoomBgResize!()
+                    }}>
+                        Music shit
                 </button>
-                <button className="buttons" type="button" onClick={() => props.screenSelected(null)}>No shit :c</button>
+                <button 
+                    className="buttons" 
+                    type="button" 
+                    onClick={() => 
+                        props.screenSelected && props.screenSelected!(null)
+                    }>
+                        No shit :c
+                    </button>
             </div>
         </div>
     )

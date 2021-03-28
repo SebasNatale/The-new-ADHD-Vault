@@ -1,3 +1,19 @@
+.backHomeButton {
+    width: 130px;
+    height: 60px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(45deg, #f700ff, #1eff00d7, #ff4242); 
+    background-size: 500% 800%; 
+    animation: bg 20s ease-in-out infinite alternate-reverse;
+}
+
+/* #musicRoom {
+    position: inherit;
+} */
+
 #warmUpInterface {
 
 
