@@ -1,3 +1,4 @@
+import * as misc from "./miscFunctions/musicRoomFunctions.js";
 import './styles/MusicRoom.css';
 
 function MusicRoom() {
@@ -8,8 +9,8 @@ function MusicRoom() {
             <i className="fas fa-chevron-down"></i>
         </div>
         <button className="backHomeButton" type="button" onClick={() => window.location.reload()}>Go back</button>
-        <div id="navBar">
-            <h1>TEST_TEST_TEST_TEST_TEST</h1>
+        <div id="abc123">
+            {misc.test()}
         </div>
     </div>)
 };
