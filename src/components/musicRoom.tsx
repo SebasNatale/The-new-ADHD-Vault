@@ -1,21 +1,5 @@
-import MainMenu from "../components/MainMenu";
-import ReactDOM from 'react-dom';
+import handleGoBackClick from './BackHomeButon';
 import './styles/MusicRoom.css';
-
-const handleGoBackClick = () => {
-    function handleBgResize() {
-        const xd: any = document.getElementById("bg_root");
-        console.log(xd)
-        console.log(xd)
-        console.log(xd)
-        xd.style.width = "100%"
-        xd.style.height = "100%"
-    }
-    ReactDOM.render(
-        <MainMenu musicRoomBgResize={handleBgResize}/>,
-        document.getElementById('root')
-    )
-};
 
 function MusicRoom() {
     return <>
