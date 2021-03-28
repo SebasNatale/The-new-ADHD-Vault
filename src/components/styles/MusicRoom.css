@@ -1,3 +1,57 @@
+/*  Here starts the "first things first" frame  */
+.warmUpVideoFrame {
+    color: white;
+    width: 100%;
+    background-color: black;
+    animation: fadeOut 700ms;
+}
+.warmUpVideoFrame > h1 {
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+.warmUpVideo {
+    width: 90%;
+    height: 274px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 25px;
+}
+.warmUpVideoFrame > i {
+    display: none;
+    position: relative;
+    right: 41%;
+    bottom: 7px;
+    animation: bounce 400ms alternate-reverse infinite;
+}
+@media (min-width: 948px) {
+    .warmUpVideoFrame {
+        height: 60%;
+    }
+    .warmUpVideo {
+        height: 80%;
+    }
+    .warmUpVideoFrame > i {
+        bottom: 3px;
+    }
+}
+@media (min-width: 1280px) {
+    .warmUpVideoFrame {
+        height: 100%;
+    }
+    .warmUpVideo {
+        height: 87%;
+    }
+    .warmUpVideoFrame > i {
+        display: inline-block;
+        bottom: 1px;
+    }
+}
+/*  Here starts the interface  */
+#warmUpInterface {
+    padding: 15px;
+}
 .backHomeButton {
     width: 130px;
     height: 60px;
@@ -9,90 +63,12 @@
     background-size: 500% 800%; 
     animation: bg 20s ease-in-out infinite alternate-reverse;
 }
-
-/* #musicRoom {
-    position: inherit;
-} */
-
-#warmUpInterface {
-
-
-
-
-
-    position: absolute;
-    z-index: 1000;
-
-
-
-
-
-}
-.warmUpVideoFade {
-    color: white;
-
-
-
-
-
-    position: fixed;
-
-
-
-
-
-
-    top: 0;
-    z-index: 999;
-    width: 100%;
+.backHomeButton:hover {
     background-color: black;
-    animation: fadeOut 700ms;
+    transform: scale(1.1);
 }
-.warmUpVideoFade > h1 {
-    color: white;
-    text-align: center;
-    margin: 25px;
-}
-.warmUpVideo {
-    width: 90%;
-    height: 274px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    margin-bottom: 25px;
-}
-.warmUpVideoFade > i {
-    position: relative;
-    right: 41%;
-    bottom: 7px;
-    animation: bounce 400ms alternate-reverse infinite;
-}
-.fa-chevron-down {
-    display: none;
-}
-
-@media (min-width: 948px) {
-    .warmUpVideoFade {
-        height: 60%;
-    }
-    .warmUpVideo {
-        height: 80%;
-    }
-    .warmUpVideoFade > i {
-        bottom: 3px;
-    }
-}
-@media (min-width: 1280px) {
-    .warmUpVideoFade {
-        height: 100%;
-    }
-    .warmUpVideo {
-        height: 87%;
-    }
-    .warmUpVideoFade > i {
-        bottom: 1px;
-    }
-    .fa-chevron-down {
-        display: inline-block;
-    }
+.backHomeButton:active {
+    background-color: black;
+    color: rgb(54, 54, 54);
+    transform: scale(0.9);
 }
