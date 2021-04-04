@@ -1,5 +1,5 @@
 function test() {
-    return <p>TEST</p>
+    return <p>This is a misc function test</p>
 };
 
 export {
