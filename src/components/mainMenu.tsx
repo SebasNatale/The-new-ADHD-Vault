@@ -11,8 +11,8 @@ interface Props {
 function MainMenu(props: Props) {
     return (
         <div id="landing">
-            <img className="dskBanner" src={dskBanner}></img>
-            <img className="mblBanner" src={mblBanner}></img>
+            <img className="dskBanner" src={dskBanner} alt='banner'></img>
+            <img className="mblBanner" src={mblBanner} alt='banner'></img>
             <h1 className="bannerTxt">What do you wanna do?</h1>
             <div className="btnContainer">
                 <button 
