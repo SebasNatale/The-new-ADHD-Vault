@@ -3,7 +3,7 @@ import "../musicRoom/dropdownMenu.css";
 
 const DropdownMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
-    const [apiCall, setApiCall]: any = useState('')
+    const [apiCall, setApiCall] = useState('')
 
     const testRequest = useCallback(async () => {
         await fetch('http://localhost:5000/api')
@@ -47,7 +47,7 @@ const DropdownMenu = () => {
             <p>{apiCall}</p>
 
             
-            <iframe src="https://ks.imslp.net/files/imglnks/usimg/2/2a/IMSLP00874-Hanpart1.pdf#view=fitH" title="testPdf" height="500px" width="100%"></iframe>
+            <iframe src={'https://ks.imslp.net/files/imglnks/usimg/2/2a/IMSLP00874-Hanpart1.pdf' + '#view=fitH'} title="testPdf" height="500px" width="100%"></iframe>
         </div>
     )
 };
