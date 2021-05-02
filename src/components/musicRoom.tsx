@@ -10,9 +10,11 @@ const MusicRoom: React.FC = () => {
         </div>
         <button className="backHomeButton" type="button" onClick={() => window.location.reload()}>Go back</button>
         <div id="musicRoomInterface">
+            <p>Estos botones estan dentro de musicRoom.tsx</p>
             <button type="button" onClick={() => alert("Falta codear el metronome worker")}>Metronome</button>
             <button type="button" onClick={() => alert("Falta codear el clock worker")}>Pomodoro clock</button>
             
+            <p>Este marco es DropdownMenu.tsx</p>
             <DropdownMenu/>
 
         </div>

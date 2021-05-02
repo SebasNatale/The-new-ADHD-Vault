@@ -1,19 +1,22 @@
-import { useState } from "react";
-import "../musicRoom/dropdownMenu.css"
+import { useState, useCallback, useEffect } from "react";
+import "../musicRoom/dropdownMenu.css";
 
 const DropdownMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [apiCall, setApiCall]: any = useState('')
 
-    async function testReq() {
-        await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    const testRequest = useCallback(async () => {
+        await fetch('http://localhost:5000/api')
             .then(response => response.json())
-            .then(json => setApiCall(JSON.stringify(json)))
-    }
+            .then(json => {
+                console.log('data de server:', json)
+                setApiCall(JSON.stringify(json))
+            })
+    }, [])
 
-
-    testReq()
-
+    useEffect(() => {
+        testRequest()
+    }, [testRequest])
 
     function handleOpenDropdown() {
         switch(showMenu) {
